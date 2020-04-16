@@ -1,21 +1,10 @@
-## Exercise 1.1
+### Setting up C++ on Windows
 
-> Review the documentation for your compiler and determine what file naming convention it uses. Compile and run the main program from page 2.
+![windows](https://code.visualstudio.com/docs/cpp/config-msvc)
 
- * [GCC and File Extensions](http://labor-liber.org/en/gnu-linux/development/index.php?diapo=extensions) 
- * [File Types Created for Visual C++ Projects](https://msdn.microsoft.com/en-us/library/3awe4781.aspx)
+### Setting up C++ on Linux
 
-## Exercise 1.2
-
-> Exercise 1.2: Change the program to return -1. A return value of -1 is often treated as an indicator that the program failed. Recompile and rerun your program to see how your system treats a failure indicator from main.
-
-### Windows
-
-![windows](https://db.tt/DIJd9eZb)
-
-### Linux
-
-![linux](https://db.tt/lhzXhpCt)
+TBA
 
 **255**? why? please look at [this](http://www.tldp.org/LDP/abs/html/exitcodes.html)
 
