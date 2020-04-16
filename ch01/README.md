@@ -1,6 +1,6 @@
 ### Setting up C++ on Windows
 
-[windows](https://code.visualstudio.com/docs/cpp/config-msvc)
+[Configure VS Code for Microsoft C++](https://code.visualstudio.com/docs/cpp/config-msvc)
 
 ### Setting up C++ on Linux
 
@@ -8,7 +8,7 @@ TBA
 
 **255**? why? please look at [this](http://www.tldp.org/LDP/abs/html/exitcodes.html)
 
-## Exercise 1.3
+### Exercise 1.3
 > Write a program to print Hello, World on the standard output.
 
 ```cpp
@@ -21,7 +21,7 @@ int main()
 }
 ```
 
-## Exercise 1.4
+### Exercise 1.4
 > Our program used the addition operator, +, to add two numbers. Write a program that uses the multiplication operator, *, to print the product instead.
 
 ```cpp
@@ -33,12 +33,11 @@ int main()
     int v1 = 0, v2 = 0;
     std::cin >> v1 >> v2;
     std::cout << "The product is " << v1 * v2 << std::endl;
-
     return 0;
 }
 ```
 
-## Exercise 1.5
+### Exercise 1.5
 
 > We wrote the output in one large statement. Rewrite the program to use a separate statement to print each operand.
 
@@ -61,20 +60,21 @@ int main()
 }
 ```
 
-## Exercise 1.6
+### Exercise 1.6
 > Explain whether the following program fragment is legal.
 
-It's illegal.
+It is illegal because no object class was defined beforehand. If we compile it we get the following error message:
 
 **[Error] expected primary-expression before '<<' token**
 
-Fixed it: remove the spare semicolons.
-
+Solution 1: remove the spare semicolons.
 ```cpp
 std::cout << "The sum of " << v1 << " and " << v2 << " is " << v1 + v2 << std::endl;
 ```
+Solution 2: insert _std::cout_ in front of each line as done in excercise
 
-## Exercise 1.7
+## Exercises Section 1.3
+### Exercise 1.7
 
 > Compile a program that has incorrectly nested comments.
 
@@ -95,7 +95,7 @@ Compiled result(g++):
 
 ![result](https://db.tt/CqQKu8GQ)
 
-## Exercise 1.8
+### Exercise 1.8
 
 > Indicate which, if any, of the following output statements are legal:
 ```cpp
