@@ -91,9 +91,7 @@ int main()
 }
 ```
 
-Compiled result(g++):
-
-![result](https://db.tt/CqQKu8GQ)
+Compiling this code results in several warning and error codes.
 
 ### Exercise 1.8
 
