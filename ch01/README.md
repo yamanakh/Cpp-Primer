@@ -1,6 +1,6 @@
 ### Setting up C++ on Windows
 
-![windows](https://code.visualstudio.com/docs/cpp/config-msvc)
+[windows](https://code.visualstudio.com/docs/cpp/config-msvc)
 
 ### Setting up C++ on Linux
 
