@@ -106,25 +106,24 @@ std::cout << /* "*/" /* "/*" */;
 program with each of these statements. Correct any errors you encounter.
 
 Compiled result:
-1) This is fine as the syntax for the start of a comment is within quotation marks and thus are read as a string.
+1) These two lines are fine as the syntax for the start and end of a comment is within quotation marks, thus read as a string.
 ```cpp
-std::cout << "/*";  /* Compilation successfull. */
+std::cout << "/*";  /* -> Compilation successfull. */
+std::cout << "*/";  /* -> Compilation successfull. */
 ```
 
+2) This line is problematic. The first comment pair is fine /* "\*/ but the second " and \*/ are on their own.
 ```cpp
-std::cout << "*/";
+std::cout << /* "*/" */;    /* -> Compilation unsuccessfull. */
 ```
 
+3) This line looks similar to the previous case but The middle part, " /* ", is read as a string and thus fine.
 ```cpp
-std::cout << /* "*/" */;
-```
-
-```cpp
-std::cout << /* "*/" /* "/*" */;
+std::cout << /* "*/" /* "/*" */;    /* -> Compilation successfull. */
 ```
 
 
-Corrected? just added a quote:
+To **correct the mistake** just add a quote on line 3:
 ```cpp
 std::cout << "/*";
 std::cout << "*/";
