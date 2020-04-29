@@ -8,6 +8,7 @@ TBA
 
 **255**? why? please look at [this](http://www.tldp.org/LDP/abs/html/exitcodes.html)
 
+## Exercises Section 1.2
 ### Exercise 1.3
 > Write a program to print Hello, World on the standard output.
 
@@ -193,7 +194,7 @@ int main()
 }
 ```
 
-##
+## Exercises Section 1.4.2
 ### Exercise 1.12
 > What does the following for loop do? What is the final value
 of sum?
