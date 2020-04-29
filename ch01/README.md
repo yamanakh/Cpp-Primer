@@ -106,24 +106,23 @@ std::cout << /* "*/" /* "/*" */;
 program with each of these statements. Correct any errors you encounter.
 
 Compiled result:
-1) These two lines are fine as the syntax for the start and end of a comment is within quotation marks, thus read as a string.
 ```cpp
 std::cout << "/*";  /* -> Compilation successfull. */
 std::cout << "*/";  /* -> Compilation successfull. */
 ```
+1) These two lines are fine as the syntax for the start and end of a comment is within quotation marks, thus read as a string.
 
-2) This line is problematic. The first comment pair is fine /* "\*/ but the second " and \*/ are on their own.
 ```cpp
 std::cout << /* "*/" */;    /* -> Compilation unsuccessfull. */
 ```
+2) This line is problematic. The first comment pair is fine /* "\*/ but the second " and \*/ are on their own.
 
-3) This line looks similar to the previous case but The middle part, " /* ", is read as a string and thus fine.
 ```cpp
 std::cout << /* "*/" /* "/*" */;    /* -> Compilation successfull. */
 ```
+3) This line looks similar to the previous case but The middle part, " /* ", is read as a string and thus fine.
 
-
-To **correct the mistake** just add a quote on line 3:
+To **correct the mistake** just add an additional quotation mark on line 3:
 ```cpp
 std::cout << "/*";
 std::cout << "*/";
@@ -135,11 +134,67 @@ Output:
 
     /**/ */ /* 
 
-## [Exercise 1.9](ex1_9.cpp)
-## [Exercise 1.10](ex1_10.cpp)
-## [Exercise 1.11](ex1_11.cpp)
+## Exercises Section 1.4.1
+### Exercise 1.9
+> Write a program that uses a while to sum the numbers from 50 to 100.
 
-## Exercise 1.12
+```cpp
+#include <iostream>
+int main()
+{
+    int sum = 0, val = 50;
+    while (val <= 100) {
+        sum += val;
+        ++val;
+    }
+    std::cout << "The sum of all numbers from 50 to 100 inclusive is " << sum << std::endl;
+    return 0;
+}
+```
+
+### Exercise 1.10
+Use the decrement operator (--) to write a while that prints the numbers from ten down to zero.
+
+```cpp
+#include <iostream>
+int main()
+{
+    int val = 10;
+    while (val >= 0) {
+        std::cout << val << std::endl;
+        --val;
+    }
+    return 0;
+}
+```
+
+### Exercise 1.11
+Write a program that prompts the user for two integers.Print each number in the range specified by those two integers.
+
+```cpp
+#include <iostream>
+int main()
+{
+    std::cout << "Enter two numbers:" << std::endl;
+    int v1 = 0, v2 = 0;
+    std::cin >> v1 >> v2;
+
+    if (v1 > v2) {
+        int temp = v1;
+        v1 = v2;
+        v2 = temp;
+    }
+
+    while (v1 <= v2) {
+        std::cout << v1 << std::endl;
+        ++v1;
+    }
+    return 0;
+}
+```
+
+##
+### Exercise 1.12
 > What does the following for loop do? What is the final value
 of sum?
 ```cpp
