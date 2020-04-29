@@ -105,9 +105,24 @@ std::cout << /* "*/" /* "/*" */;
 > After you’ve predicted what will happen, test your answers by compiling a
 program with each of these statements. Correct any errors you encounter.
 
-Compiled result(g++):
+Compiled result:
+1) This is fine as the syntax for the start of a comment is within quotation marks and thus are read as a string.
+```cpp
+std::cout << "/*";  /* Compilation successfull. */
+```
 
-![result](https://db.tt/mrL9hDCS)
+```cpp
+std::cout << "*/";
+```
+
+```cpp
+std::cout << /* "*/" */;
+```
+
+```cpp
+std::cout << /* "*/" /* "/*" */;
+```
+
 
 Corrected? just added a quote:
 ```cpp
