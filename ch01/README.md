@@ -2,11 +2,6 @@
 
 [Configure VS Code for Microsoft C++](https://code.visualstudio.com/docs/cpp/config-msvc)
 
-### Setting up C++ on Linux
-
-TBA
-
-**255**? why? please look at [this](http://www.tldp.org/LDP/abs/html/exitcodes.html)
 
 ## Exercises Section 1.2
 ### Exercise 1.3
@@ -108,32 +103,32 @@ program with each of these statements. Correct any errors you encounter.
 
 Compiled result:
 ```cpp
-std::cout << "/*";  /* -> Compilation successfull. */
-std::cout << "*/";  /* -> Compilation successfull. */
+std::cout << "/\*";  /\* -> Compilation successfull. \*/
+std::cout << "\*/";  /\* -> Compilation successfull. \*/
 ```
 1) These two lines are fine as the syntax for the start and end of a comment is within quotation marks, thus read as a string.
 
 ```cpp
-std::cout << /* "*/" */;    /* -> Compilation unsuccessfull. */
+std::cout << /\* "\*/" \*/;    /\* -> Compilation unsuccessfull. */
 ```
 2) This line is problematic. The first comment pair is fine /* "\*/ but the second " and \*/ are on their own.
 
 ```cpp
-std::cout << /* "*/" /* "/*" */;    /* -> Compilation successfull. */
+std::cout << /\* "\*/" /\* "/\*" \*/;    /\* -> Compilation successfull. \*/
 ```
-3) This line looks similar to the previous case but The middle part, " /* ", is read as a string and thus fine.
+3) This line looks similar to the previous case but The middle part, " /\* ", is read as a string and thus fine.
 
 To **correct the mistake** just add an additional quotation mark on line 3:
 ```cpp
-std::cout << "/*";
-std::cout << "*/";
-std::cout << /* "*/" */";
-std::cout << /* "*/" /* "/*" */;
+std::cout << "/\*";
+std::cout << "\*/";
+std::cout << /\* "\*/" \*/";
+std::cout << /\* "\*/" /\* "/\*" \*/;
 ```
 
 Output:
 
-    /**/ */ /* 
+    /\*\*/ \*/ /\* 
 
 ## Exercises Section 1.4.1
 ### Exercise 1.9
