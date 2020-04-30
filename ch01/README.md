@@ -128,7 +128,7 @@ std::cout << /* "*/" /* "/*" */;
 
 Output:
 
-    /\*\*/ \*/ /\* 
+    /**/ */ /* 
 
 ## Exercises Section 1.4.1
 ### Exercise 1.9
