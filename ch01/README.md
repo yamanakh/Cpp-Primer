@@ -204,21 +204,20 @@ for (int i = -100; i <= 100; ++i)
     sum += i;
 ```
 
-the loop sums the numbers from -100 to 100. the final value of sum is zero.
+Answer: The for loop sums all numbers from -100 to 100 inclusive. The result is 0.
 
-## Exercise 1.13
+### Exercise 1.13
 > Rewrite the exercises from § 1.4.1 (p. 13) using for loops.
 
 Ex1.9:
 ```cpp
 #include <iostream>
-
 int main()
 {
     int sum = 0;
-    for (int i = 50; i <= 100; ++i) sum += i;
-    std::cout << "the sum is: " << sum << std::endl;
-
+    for (int val = 50; val <= 100; ++val)
+        sum += val;
+    std::cout << "The sum of all numbers from 50 to 100 inclusive is " << sum << std::endl;
     return 0;
 }
 ```
@@ -226,11 +225,10 @@ int main()
 Ex1.10:
 ```cpp
 #include <iostream>
-
 int main()
 {
-    for (int i = 10; i >= 0; --i)
-        std::cout << i << std::endl;
+    for (int val = 10; val >= 0; --val)
+        std::cout << val << std::endl;
     return 0;
 }
 ```
@@ -238,42 +236,42 @@ int main()
 Ex1.11:
 ```cpp
 #include <iostream>
-
 int main()
 {
-    std::cout << "please input two integers:\n";
-    int small = 0, big = 0;
-    std::cin >> small >> big;
+    std::cout << "Enter two numbers:" << std::endl;
+    int v1 = 0, v2 = 0;
+    std::cin >> v1 >> v2;
 
-    if (small > big)
-    {
-        int tmp = small;
-        small = big;
-        big = tmp;
+    if (v1 > v2) {
+        int temp = v1;
+        v1 = v2;
+        v2 = temp;
     }
 
-    for (int i = small; i != big; ++i)
-        std::cout << i << std::endl;
-
+    for (int small = v1; small <= v2; ++small)
+        std::cout << small << std::endl;
     return 0;
 }
 ```
 
-## Exercise 1.14
-> Compare and contrast the loops that used a for with those
-using a while. Are there advantages or disadvantages to using either form?
+### Exercise 1.14
+> Compare and contrast the loops that used a for with those using a while. Are there advantages or disadvantages to using either form?
 
-[A similar question on Stack Overflow](http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming)
+[Answer to a similar question on Stack Overflow](http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming)
 
-## Exercise 1.15
-> Write programs that contain the common errors discussed in
-the box on page 16. Familiarize yourself with the messages the compiler
-generates.
+Short summary:
+*A while loop will always evaluate the condition first.
+A do/while loop will always execute the code in the do{} block first and then evaluate the condition.
+A for loop allows you to initiate a counter variable, a check condition, and a way to increment your counter all in one line.
+At the end of the day, they are all still loops, but they offer some flexibility as to how they are executed.*
+
+### Exercise 1.15
+> Write programs that contain the common errors discussed in the box on page 16. Familiarize yourself with the messages the compiler generates.
 
 **Syntax Errors**:
 ```c++
 int main(){
-    std::cout << "Hello World!" << std::endl // semicolon missed 
+    std::cout << "Hello World!" << std::endl // semicolon missing 
     return 0;
 }
 ```
@@ -296,8 +294,8 @@ int main(){
 }
 ```
 
-
-## Exercise 1.16
+## Exercises Section 1.4.3
+### Exercise 1.16
 
 ```cpp
 #include <iostream>
@@ -310,8 +308,8 @@ int main()
     return 0;
 }
 ```
-
-## Exercise 1.17
+## Exercises Section 1.4.4
+### Exercise 1.17
 
 > What happens in the program presented in this section if the input values are all equal? What if there are no duplicated values?
 
@@ -319,7 +317,7 @@ If the input values are all equal, it will print a line which shows the count of
 
 If there are no duplicated values, when different values input, a new line will be printed if you click `Enter`.
 
-## Exercise 1.18
+### Exercise 1.18
 
 > Compile and run the program from this section giving it only equal values as input. Run it again giving it values in which no number is repeated.
 
